@@ -34,7 +34,7 @@
 			// runn the loop
 			if($featured->have_posts()) :
 				while($featured->have_posts()) : $featured->the_post();
-					get_template_part( 'content','home' );
+					get_template_part( 'content','front' );
 				endwhile;
 			else: ?>
 				<p>Query returned no posts</p>
