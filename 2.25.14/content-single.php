@@ -25,7 +25,7 @@ Some template tags you might want to use:
 	<?php  if((get_post_meta($post->ID, "link_url", true))) { ?>
 		<p class="work_url">
 			<a href="<?php echo get_post_meta($post->ID, "link_url", true); ?>">Visit Site</a>		
-		</div>
+		</p>
 	<?php } ?>
 
 
