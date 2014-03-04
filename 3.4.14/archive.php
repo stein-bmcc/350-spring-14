@@ -22,14 +22,18 @@
 						       	echo 'Posts Tagged with ' . get_queried_object()->name ; 
 
 						    } elseif ( is_category() ) { 
-						       	echo get_queried_object()->category_nicename . ' Category'; 
+						       	echo get_queried_object()->name . ' Category'; 
 
 						    }elseif(get_queried_object()->user_login){
 						    	echo 'Posts by ' . get_queried_object()->user_nicename ;
 						    } 
 						    ?>
 						 </h2>
-  			<?php  
+				<?php
+						 if( is_category()){
+						 	echo '<p>' . get_queried_object()->description . '</p>';
+						}
+  			  
   						//print_r(get_queried_object());
   						//this gets ready for the loop
   						rewind_posts();
