@@ -1,0 +1,38 @@
+*{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.date{
+	width: 16.6666666667%;
+	float: left;
+	padding: 0 1%;
+}
+
+.info{
+	width: 66.666666667%;
+	float: left;
+	padding: 0 1%;
+}
+
+.location{
+	width: 16.6666666667%;;
+	float: left;
+	padding: 0 1%;
+}
+
+.container{
+	border:1px solid #555;
+	padding:0.5em;
+}
+
+.first{
+	clear:both;
+}
+
+.thing{
+	width: 8.3333333333%;;
+	float: left;
+	padding: 0 1%;
+}
