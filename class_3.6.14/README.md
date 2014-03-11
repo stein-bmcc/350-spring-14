@@ -70,7 +70,7 @@ In addition to the CSS above you would add this below. The padding is added to m
 ## Percentage Helper Chart
 This chart shows percentages for some of the commmon column widths you might need. The way you read it is first look for how many total columns you have in a row (12, 6, 4, 3, 2) and then go down to the number of columns you want for the element you're styling. Then look to the right for the percentage. 
 
-So if I wanted to
+So if I wanted to make an element that was 5 columns out of 6 total I would set the width to 83.333333%
 
 | 12 cols | 6 cols | 4 cols | 3 cols | 2 cols |             |
 |---------|--------|--------|--------|--------|-------------|
