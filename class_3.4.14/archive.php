@@ -9,7 +9,13 @@
 						the_post(); 
 			?>
 						<h2 class="page-title">
-						    <?php if ( is_day() ) { 
+						    <?php 
+
+						    //get queried object in case it's needed
+						    $queried_object = get_queried_object();
+
+
+						    if ( is_day() ) { 
 						      	echo 'Archive for ' . get_the_date(); 
 
 						    } elseif ( is_month() ) { 
@@ -19,19 +25,21 @@
 						       	echo 'Archive for ' . get_the_date('Y'); 
 
 						    } elseif ( is_tag() ) { 
-						       	echo 'Posts Tagged with ' . get_queried_object()->name ; 
+						       	echo 'Posts Tagged with ' . $queried_object->name ; 
 
 						    } elseif ( is_category() ) { 
-						       	echo get_queried_object()->name . ' Category'; 
+						       	echo $queried_object->name . ' Category'; 
 
-						    }elseif(get_queried_object()->user_login){
-						    	echo 'Posts by ' . get_queried_object()->user_nicename ;
+						    }elseif($queried_object->user_login){
+						    	echo 'Posts by ' . $queried_object->user_nicename ;
 						    } 
 						    ?>
 						 </h2>
 				<?php
 						 if( is_category()){
-						 	echo '<p>' . get_queried_object()->description . '</p>';
+						 	//echo '<p>' . $queried_object->description . '</p>';
+						 	//trying something else instead
+						 	echo category_description();
 						}
   			  
   						//print_r(get_queried_object());
